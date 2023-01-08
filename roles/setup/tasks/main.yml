@@ -18,7 +18,7 @@
   shell: npm install pm2 -g
 - name: "create ~/web folder"
   become: true
-  shell: mkdir ~/web
+  shell: mkdir -p ~/web
 - name: "add index.js file"
   copy:
     src: index.js
