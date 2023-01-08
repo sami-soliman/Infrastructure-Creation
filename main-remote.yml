@@ -1,0 +1,6 @@
+---
+
+- name: Exercise for setting up a web server in an EC
+  hosts: all
+  roles:
+  - setup
