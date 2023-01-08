@@ -1,16 +1,16 @@
 ---
 - name: "update apt packages."
   become: true
-  apt:
+  package:
     update_cache: yes
 
 - name: "upgrade packages"
   become: true
-  apt:
+  package:
     upgrade: yes
 - name: "install nodeJS"
   become: true
-  apt:
+  package:
     name: ["nodejs","npm"]
     state: latest
 - name: "install pm2"
