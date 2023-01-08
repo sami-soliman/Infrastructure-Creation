@@ -21,13 +21,14 @@ jobs:
             - checkout
             - add_ssh_keys:
                 # You can get this ID in the section where you registered the SSH Key
-                fingerprints: ["58:40:4f:52:d1:97:3f:b8:c8:16:bf:a7:60:14:b1:47"]
-            - run:
-                name: disable ssh authentication
-                command: |
-                    mkdir -p ~/.ssh ;
-                    touch ~/.ssh/config ;
-                    echo 'PubkeyAuthentication yes' > ~/.ssh/config
+                fingerprints:
+                    - "58:40:4f:52:d1:97:3f:b8:c8:16:bf:a7:60:14:b1:47"
+            #- run:
+             #   name: disable ssh authentication
+              #  command: |
+               #     mkdir -p ~/.ssh ;
+                #    touch ~/.ssh/config ;
+                 #   echo 'PubkeyAuthentication yes' > ~/.ssh/config
             - run:
                 name: Install Ansible
                 command: |
