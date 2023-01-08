@@ -24,10 +24,6 @@ jobs:
                 fingerprints:
                     - 58:40:4f:52:d1:97:3f:b8:c8:16:bf:a7:60:14:b1:47
             - run:
-                name: disable ssh authentication
-                command: |
-                    ssh -o UserKnownHostsFile=/dev/null
-            - run:
                 name: Install Ansible
                 command: |
                     apk add --update ansible
