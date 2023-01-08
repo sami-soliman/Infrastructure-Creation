@@ -25,9 +25,9 @@ jobs:
             - run:
                 name: disable ssh authentication
                 command: |
-            	    mkdir -p ~/.ssh
-            	    touch ~/.ssh/config
-            	    echo 'PubkeyAuthentication yes' > ~/.ssh/config
+                    mkdir -p ~/.ssh ;
+                    touch ~/.ssh/config ;
+                    echo 'PubkeyAuthentication yes' > ~/.ssh/config
             - run:
                 name: Install Ansible
                 command: |
@@ -41,4 +41,5 @@ workflows:
     createIacCICD:
         jobs:
             - configure_infrastructure
+
 
